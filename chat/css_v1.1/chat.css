@@ -1,0 +1,82 @@
+.bubbleDiv{  
+    width: 100%;
+    height: 500px;
+    margin: 0px;
+    padding: 0px;
+}  
+.bubbleItem{  
+    width: 100%;  
+    list-style:none;
+    margin: 0px;
+    padding: 5px;
+}  
+.bubble{  
+    position: relative;  
+    line-height: 30px;  
+    border-radius: 7px;  
+    display: inline-block;  
+    padding-left: 10px;
+    padding-right: 10px;
+}  
+.leftBubble{  
+    position: relative;  
+    margin-left: 15px;  
+    border: 1px solid #00b6b6;  
+    background-color: #f8fdfc;  
+}  
+.leftBubble .bottomLevel{  
+    position: absolute;  
+    top: 10px;  
+    left: -10px;  
+    border-top: 10px solid #00b6b6;  
+    border-left: 10px solid transparent;  
+}  
+.leftBubble .topLevel{  
+    position: absolute;  
+    top: 11px;  
+    left: -8px;  
+    border-top: 10px solid #f8fdfc;  
+    border-left: 10px solid transparent;  
+    z-index: 100;  
+}
+.rightBubble{  
+    position: relative;
+    float: right;
+    margin-right:15px;
+    border: 1px solid #00b6b6;  
+    background-color: #f8fdfc;  
+}  
+.rightBubble .bottomLevel{  
+    position: absolute;  
+    top: 10px;  
+    right: -10px;  
+    border-top: 10px solid #00b6b6;  
+    border-right: 10px solid transparent;  
+}  
+.rightBubble .topLevel{  
+    position: absolute;  
+    top: 11px;  
+    right: -8px;  
+    border-top: 10px solid #f8fdfc;  
+    border-right: 10px solid transparent;  
+    z-index: 100;  
+}
+.clearfix:after {  
+    visibility: hidden;  
+    display: block;  
+    font-size: 0;  
+    content: " ";  
+    clear: both;  
+    height: 0;  
+}
+.overflow-3::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.0);
+}
+
+.overflow-3::-webkit-scrollbar {
+   width: 6px;
+}
+.overflow-3::-webkit-scrollbar-thumb {
+   background-color:skyblue;
+   border-radius   : 10px;
+}
