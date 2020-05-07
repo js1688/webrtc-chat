@@ -1,7 +1,7 @@
 # webrtc-chat
 A.文件包说明
 
-    1.chat 目录是前端页面,建议用nginx部署,index.html 是例子页面
+    1.chat 目录是前端页面,建议用nginx部署,index.html 是例子页面
 
     2.websocket 是使用springboot+maven构建的信令服务器,直接使用命令 java -jar websocket-0.0.1-SNAPSHOT.jar 启动即可
 
