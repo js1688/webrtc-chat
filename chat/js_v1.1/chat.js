@@ -30,7 +30,7 @@ $("body").append(
     '</div>'
 );
 $("body").append(
-    '<div class="modal fade" id="chat_name_modal" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="myModalLabel">'+
+    '<div class="modal fade" id="chat_name_modal" tabindex="-1" role="dialog" data-keyboard="true" data-backdrop="static" aria-labelledby="myModalLabel">'+
         '<div class="modal-dialog">'+
             '<div class="modal-content">'+
                 '<div class="modal-header">'+
@@ -38,6 +38,7 @@ $("body").append(
                 '</div>'+
                 '<div class="modal-body"><input type="text" id="chat_name" class="form-control" placeholder="请输入你昵称"></div>'+
                 '<div class="modal-footer">'+
+                    '<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>'+
                     '<button type="button" class="btn btn-primary" onclick="chat_setName()">确定</button>'+
                 '</div>'+
             '</div>'+
@@ -294,8 +295,13 @@ var chat_response = function(type,msg){
  */
 $("#rct_con").on("click",function(e){
     e.stopPropagation();
-    //先起名
-    $("#chat_name_modal").modal('show');
+    if(chat_socket == null){
+        //先起名
+        $("#chat_name_modal").modal('show');
+    }else{
+        chat_sendMsg(1,"");//请求获取其他在线用户的信息,排除掉自己
+    }
+    
 });
 
 var chat_sendClick = function(){

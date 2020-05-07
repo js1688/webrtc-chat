@@ -1,2 +1,8 @@
 
 *.DS_Store
+websocket/.idea/*
+*.iml
+websocket/.idea/vcs.xml
+*.log
+*.logs
+websocket/target/*
